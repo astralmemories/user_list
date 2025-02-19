@@ -1,0 +1,4 @@
+services:
+  user_list.user_api_service:
+    class: 'Drupal\user_list\Service\UserApiService'
+    arguments: ['@entity_type.manager']

@@ -1,0 +1,27 @@
+<div id="user-list-container">
+  <p>Users found: {{ users|length }}</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido 1</th>
+        <th>Apellido 2</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+          <td>{{ user.name }}</td>
+          <td>{{ user.surname1 }}</td>
+          <td>{{ user.surname2 }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div id="ajax-user-list-form">
+  {{ ajax_form }}
+</div>
