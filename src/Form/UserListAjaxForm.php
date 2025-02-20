@@ -23,9 +23,16 @@ class UserListAjaxForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $users = $this->getUserList();
+
     $form['user_list_wrapper'] = [
       '#type' => 'container',
       '#attributes' => ['id' => 'user-list-wrapper'],
+      '#children' => [
+        '#theme' => 'user_list',
+        '#users' => $users,
+        '#form' => $form,
+      ],
     ];
 
     $form['actions'] = [
@@ -63,7 +70,6 @@ class UserListAjaxForm extends FormBase {
       $rendered_list = [
         '#theme' => 'user_list',
         '#users' => $users,
-        '#form' => $form,
       ];
 
       $response->addCommand(new ReplaceCommand('#user-list-wrapper', \Drupal::service('renderer')->render($rendered_list)));
