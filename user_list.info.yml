@@ -3,3 +3,5 @@ type: module
 description: 'Módulo que muestra un listado de usuarios con paginación y búsqueda AJAX.'
 core_version_requirement: ^10 || ^11
 package: Custom
+dependencies:
+  - drupal:ajax

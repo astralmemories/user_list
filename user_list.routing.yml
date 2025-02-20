@@ -13,3 +13,11 @@ user_list.ajax:
   requirements:
     _permission: 'access content'
   methods: ['POST']
+
+user_list.content:
+  path: '/user-list'
+  defaults:
+    _title: 'User List'
+    _form: '\Drupal\user_list\Form\UserListAjaxForm'
+  requirements:
+    _permission: 'access content'
