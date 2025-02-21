@@ -37,7 +37,7 @@ class UserListAjaxForm extends FormBase {
 
     $form['actions'] = [
       '#type' => 'button',
-      '#value' => $this->t('Load Users'),
+      '#value' => $this->t('Cargar usuarios'),
       '#ajax' => [
         'callback' => '::ajaxCallback',
         'wrapper' => 'user-list-wrapper',

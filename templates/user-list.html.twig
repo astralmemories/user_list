@@ -1,7 +1,7 @@
 {{ attach_library('user_list/user_list_table') }}
 
 <div id="user-list-wrapper">
-  <p>Users found: {{ users|length }}</p>
+  <p>Usuarios encontrados: {{ users|length }}</p>
 
   <table
     class="table table-striped"
@@ -16,8 +16,8 @@
     <thead>
       <tr>
         <th data-sortable="true">{{ 'Nombre'|t }}</th>
-        <th data-sortable="true">{{ 'Apellido 1'|t }}</th>
-        <th data-sortable="true">{{ 'Apellido 2'|t }}</th>
+        <th data-sortable="true">{{ 'Primer Apellido'|t }}</th>
+        <th data-sortable="true">{{ 'Segundo Apellido'|t }}</th>
         <th data-sortable="true">{{ 'Email'|t }}</th>
       </tr>
     </thead>
@@ -31,7 +31,7 @@
         </tr>
       {% else %}
         <tr>
-          <td colspan="4">No users found.</td>
+          <td colspan="4">No se encontraron usuarios.</td>
         </tr>
       {% endfor %}
     </tbody>

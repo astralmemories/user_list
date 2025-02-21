@@ -15,6 +15,7 @@ user_list_table:
       https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css: {}
   js:
     https://cdn.jsdelivr.net/npm/bootstrap-table@1.24.0/dist/bootstrap-table.min.js: {}
+    js/user_list.js: {}
   dependencies:
     - core/jquery
     - core/drupal

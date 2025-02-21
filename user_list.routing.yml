@@ -1,7 +1,7 @@
 user_list.content:
   path: '/user-list'
   defaults:
-    _title: 'User List'
+    _title: 'Listado de usuarios'
     _form: '\Drupal\user_list\Form\UserListAjaxForm'
   requirements:
     _permission: 'access content'
