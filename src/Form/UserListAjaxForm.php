@@ -100,10 +100,13 @@ class UserListAjaxForm extends FormBase {
 
     $user_list = [];
     foreach ($users as $user) {
+      $surname1 = $user->get('field_surname1')->value;
+      $surname2 = $user->get('field_surname2')->value;
+
       $user_list[] = [
         'name' => $user->getDisplayName(),
-        'surname1' => 'N/A', // Modify if needed.
-        'surname2' => 'N/A',
+        'surname1' => $surname1 ? $surname1 : 'N/A',
+        'surname2' => $surname2 ? $surname2 : 'N/A',
         'email' => $user->getEmail(),
       ];
     }
