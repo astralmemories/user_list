@@ -1,13 +1,24 @@
+{{ attach_library('user_list/user_list_table') }}
+
 <div id="user-list-wrapper">
   <p>Users found: {{ users|length }}</p>
 
-  <table>
+  <table
+    class="table table-striped"
+    data-toggle="table"
+    data-toolbar="#toolbar"
+    data-search="true"
+    data-search-highlight="true"
+    data-sort-reset="true"
+    data-pagination="true"
+    data-page-size="5"
+    data-cookie="true">
     <thead>
       <tr>
-        <th>{{ 'Nombre'|t }}</th>
-        <th>{{ 'Apellido 1'|t }}</th>
-        <th>{{ 'Apellido 2'|t }}</th>
-        <th>{{ 'Email'|t }}</th>
+        <th data-sortable="true">{{ 'Nombre'|t }}</th>
+        <th data-sortable="true">{{ 'Apellido 1'|t }}</th>
+        <th data-sortable="true">{{ 'Apellido 2'|t }}</th>
+        <th data-sortable="true">{{ 'Email'|t }}</th>
       </tr>
     </thead>
     <tbody>
